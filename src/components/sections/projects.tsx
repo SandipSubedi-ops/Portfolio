@@ -32,6 +32,7 @@ export default function Projects() {
       links: {
         github: "https://github.com/SandipSubedi-ops",
         liveDemo: "#",
+        doc: "/",
       },
     },
     {
@@ -44,30 +45,33 @@ export default function Projects() {
       links: {
         github: "#",
         liveDemo: "#",
+        doc: "/Age_and__Gender_Detection.pdf",
       },
     },
     {
       title: "Face Recognition Attendance System",
       description:
         "Automated attendance management using face recognition with TensorFlow and Keras.",
-      image: "/images/projects/face-attendance.png",
+      image: "/faceRecognitoin.jfif",
       role: "AI/ML Developer",
       techStack: ["TensorFlow", "Keras", "OpenCV", "Tkinter", "Python"],
       links: {
         github: "#",
         liveDemo: "#",
+        doc: "/",
       },
     },
     {
       title: "E-Commerce Platform",
       description:
         "Full-stack e-commerce solution handling 500+ products with secure authentication.",
-      image: "/images/projects/ecommerce.png",
+      image: "/ecommerce.png",
       role: "Full Stack Developer",
       techStack: ["MongoDB", "Express.js", "React", "Node.js", "JWT"],
       links: {
         github: "#",
         liveDemo: "#",
+        doc: "/docs/hr-module.pdf",
       },
     },
     {
@@ -86,6 +90,7 @@ export default function Projects() {
       links: {
         github: "#",
         liveDemo: "#",
+        doc: "/docs/hr-module.pdf",
       },
     },
   ];
@@ -105,14 +110,14 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            className="group bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="relative w-full h-70">
+            <div className="relative w-full h-70 overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className="object-cover transform transition-transform duration-500 group-hover:scale-110"
               />
             </div>
 
@@ -155,6 +160,27 @@ export default function Projects() {
                         )}
                   </ul>
                 </div>
+
+                {/* New Button */}
+                <div className="mt-5">
+                  <a
+                    href={project.links.doc}
+                    download // 🔹 this forces download
+                    className="group relative flex justify-center items-center h-[36px] w-full overflow-hidden border-[.01px] border-gray-800 bg-purple-600"
+                  >
+                    <div className="relative z-[3] text-sm text-white">
+                      Download Docs
+                    </div>
+
+                    {/* animated border line */}
+                    <span className="absolute inset-0 pointer-events-none">
+                      <span className="absolute top-0 left-0 w-full h-[2px] bg-purple-400 animate-border-top" />
+                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-purple-400 animate-border-bottom" />
+                      <span className="absolute top-0 left-0 h-full w-[2px] bg-purple-400 animate-border-left" />
+                      <span className="absolute top-0 right-0 h-full w-[2px] bg-purple-400 animate-border-right" />
+                    </span>
+                  </a>
+                </div>
               </div>
 
               <div className="flex justify-between items-center mt-4">
@@ -176,6 +202,11 @@ export default function Projects() {
             </div>
           </div>
         ))}
+        <div className="flex items-center justify-center bg-white dark:bg-gray-800 shadow-lg rounded-2xl h-60 hover:shadow-xl transition-shadow duration-300">
+          <div className="flex items-center justify-center w-16 h-16 rounded-full bg-purple-600 text-white text-3xl font-bold">
+            ...
+          </div>
+        </div>
       </div>
     </section>
   );

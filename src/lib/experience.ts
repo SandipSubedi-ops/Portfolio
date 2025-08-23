@@ -12,6 +12,7 @@ const ExperienceList = [
       "Optimized SQL queries, reducing execution time by 40%.",
       "Integrated Redis caching and third-party APIs to enhance performance.",
       "Authored structured documentation for the HMS for stakeholders and future maintainers.",
+      "Solved the issues of PMS",
     ],
   },
   {
