@@ -150,7 +150,7 @@ export default function AboutSection() {
             <div className="flex flex-col items-start gap-4">
               <div className="overflow-hidden">
                 <div className="dark:text-white text-animation">
-                  With over 1+years of experience as a developer, I specialize
+                  With over 2+years of experience as a developer, I specialize
                   in crafting user-friendly web applications. I excel in
                   creating intuitive interfaces and enjoy working in
                   collaborative, agile environments with knowledge in frontend

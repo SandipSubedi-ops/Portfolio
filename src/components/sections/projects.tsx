@@ -32,7 +32,7 @@ export default function Projects() {
       links: {
         github: "https://github.com/SandipSubedi-ops",
         liveDemo: "#",
-        doc: "/",
+        doc: "",
       },
     },
     {
@@ -52,7 +52,7 @@ export default function Projects() {
       title: "Face Recognition Attendance System",
       description:
         "Automated attendance management using face recognition with TensorFlow and Keras.",
-      image: "/faceRecognitoin.jfif",
+      image: "/faceRecognitoin.png",
       role: "AI/ML Developer",
       techStack: ["TensorFlow", "Keras", "OpenCV", "Tkinter", "Python"],
       links: {
