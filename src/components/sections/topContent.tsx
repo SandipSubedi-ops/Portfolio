@@ -65,8 +65,9 @@ export default function TopContent() {
 
         <p className="bio-animation text-sm md:text-base max-w-md mx-auto md:mx-0 opacity-80">
           Passionate and detail-oriented developer with years of experience in
-          web development with <b>.NET</b>, <b>JavaScript</b>, and many more
-          modern technologies. Where creativity meets functionality.
+          web development with<b>.NET</b>, <b>JavaScript</b>,<b>jQuery</b>,{" "}
+          <b>Nodejs</b>, and many more modern technologies. Where creativity
+          meets functionality.
         </p>
 
         <Link

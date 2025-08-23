@@ -58,7 +58,7 @@ export default function Projects() {
       links: {
         github: "#",
         liveDemo: "#",
-        doc: "/",
+        doc: "/final report 2.pdf",
       },
     },
     {
@@ -71,7 +71,7 @@ export default function Projects() {
       links: {
         github: "#",
         liveDemo: "#",
-        doc: "/docs/hr-module.pdf",
+        doc: "",
       },
     },
     {
@@ -90,7 +90,7 @@ export default function Projects() {
       links: {
         github: "#",
         liveDemo: "#",
-        doc: "/docs/hr-module.pdf",
+        doc: "",
       },
     },
   ];
@@ -163,23 +163,32 @@ export default function Projects() {
 
                 {/* New Button */}
                 <div className="mt-5">
-                  <a
-                    href={project.links.doc}
-                    download // 🔹 this forces download
-                    className="group relative flex justify-center items-center h-[36px] w-full overflow-hidden border-[.01px] border-gray-800 bg-purple-600"
-                  >
-                    <div className="relative z-[3] text-sm text-white">
-                      Download Docs
-                    </div>
+                  {project.links.doc ? (
+                    // ✅ Show button if doc exists
+                    <a
+                      href={project.links.doc}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative flex justify-center items-center h-[36px] w-full overflow-hidden border-[.01px] border-gray-800 bg-purple-600"
+                    >
+                      <div className="relative z-[3] text-sm text-white">
+                        View Docs
+                      </div>
 
-                    {/* animated border line */}
-                    <span className="absolute inset-0 pointer-events-none">
-                      <span className="absolute top-0 left-0 w-full h-[2px] bg-purple-400 animate-border-top" />
-                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-purple-400 animate-border-bottom" />
-                      <span className="absolute top-0 left-0 h-full w-[2px] bg-purple-400 animate-border-left" />
-                      <span className="absolute top-0 right-0 h-full w-[2px] bg-purple-400 animate-border-right" />
-                    </span>
-                  </a>
+                      {/* animated border line */}
+                      <span className="absolute inset-0 pointer-events-none">
+                        <span className="absolute top-0 left-0 w-full h-[2px] bg-purple-400 animate-border-top" />
+                        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-purple-400 animate-border-bottom" />
+                        <span className="absolute top-0 left-0 h-full w-[2px] bg-purple-400 animate-border-left" />
+                        <span className="absolute top-0 right-0 h-full w-[2px] bg-purple-400 animate-border-right" />
+                      </span>
+                    </a>
+                  ) : (
+                    // ❌ If doc not found, show "Private"
+                    <div className="flex justify-center items-center h-[36px] w-full border border-gray-500 bg-gray-300 dark:bg-gray-700 rounded-lg text-sm text-gray-600 dark:text-gray-300 cursor-not-allowed">
+                      Private
+                    </div>
+                  )}
                 </div>
               </div>
 
